@@ -20,7 +20,8 @@ if [ ! -e $SERVICE_PATH ]; then
 fi
 sudo chmod +x $SERVICE_PATH
 
-sudo pip install --upgrade sibus_lib deepdiff
+sudo pip install --upgrade sibus_lib
+sudo pip install --upgrade deepdiff
 
 echo " # Patching service $SERVICE systemd config file..."
 sed 's|<SCRIPT_PATH>|'$SERVICE_PATH'|g' $SYSTEMD_ORG > "/tmp/tmp.systemd"
