@@ -1,0 +1,15 @@
+[Unit]
+Description=Sibus Jeedom Wrapper service
+After=sibus-core.target
+
+[Service]
+Type=simple
+User=<USER>
+ExecStart=<SCRIPT_PATH>
+WorkingDirectory=<SCRIPT_DIR>
+Restart=on-failure
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target
